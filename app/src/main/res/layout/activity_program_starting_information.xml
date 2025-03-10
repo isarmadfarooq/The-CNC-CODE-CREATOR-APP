@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    tools:context=".ProgramStartingInformation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+    <RelativeLayout
+        android:id="@+id/programStartingInfoRl"
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/programStartingInfoTv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/program_starting_information"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/materialSelectionRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/programStartingInfoRl"
+            android:layout_marginTop="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fauncTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fanuc"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/button_background"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectFauncTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:background="@color/lite_blue"
+                android:layout_toEndOf="@id/fauncTv"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/hassTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hass"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/selectFauncTv"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:background="@drawable/button_background"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectHassTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take"
+                android:textStyle="bold"
+                android:background="@color/lite_blue"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/hassTv"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/steelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/steel"
+                android:textColor="@color/black"
+                android:layout_below="@id/fauncTv"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/button_background"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectSteelTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take"
+                android:textStyle="bold"
+                android:background="@color/lite_blue"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/selectFauncTv"
+                android:layout_toEndOf="@id/steelTv"
+                android:layout_marginTop="20dp"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/aluminiumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aluminium"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/selectSteelTv"
+                android:layout_below="@id/hassTv"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:background="@drawable/button_background"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectAluminiumTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take"
+                android:textStyle="bold"
+                android:background="@color/lite_blue"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/selectHassTv"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/aluminiumTv"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/aisi303Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aisi_303"
+                android:textColor="@color/black"
+                android:layout_below="@id/steelTv"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/button_background"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectAisi303Tv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take"
+                android:textStyle="bold"
+                android:background="@color/lite_blue"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/selectSteelTv"
+                android:layout_toEndOf="@id/steelTv"
+                android:layout_marginTop="20dp"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/aisi316Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aisi_316"
+                android:textColor="@color/black"
+                android:layout_below="@id/aluminiumTv"
+                android:layout_toEndOf="@id/selectAisi303Tv"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_background"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectAisi316Tv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take"
+                android:textStyle="bold"
+                android:background="@color/lite_blue"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/selectAluminiumTv"
+                android:layout_toEndOf="@id/aisi316Tv"
+                android:layout_marginTop="20dp"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/materialReedingRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/materialSelectionRl"
+            android:layout_marginTop="40dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/zeropointBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero_point"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/zeroPointEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/zeropointBtn"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/g54"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/spindleLimitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spindle_limit"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/zeroPointEt"
+                android:layout_marginStart="10dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/spindleLimitEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/spindleLimitBtn"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/_2000"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coolantOnBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coolant_on"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/zeropointBtn"
+                android:layout_marginTop="20dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/coolantOnEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/coolantOnBtn"
+                android:layout_below="@id/zeroPointEt"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/m8"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coolantOffBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coolant_off"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/coolantOnEt"
+                android:layout_below="@id/spindleLimitBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/coolantOffEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/coolantOffBtn"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/m9"
+                android:layout_below="@id/spindleLimitEt"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/spindleDirBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spindle_dir"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/coolantOnBtn"
+                android:layout_marginTop="20dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/spindleDirEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/coolantOnBtn"
+                android:layout_below="@id/coolantOnEt"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/m3"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/optionStopBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/option_stop"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/spindleDirEt"
+                android:layout_below="@id/coolantOffBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/optionStopEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/optionStopBtn"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/m1"
+                android:layout_below="@id/coolantOffEt"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/blancDiaBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blanc_dia"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/spindleDirBtn"
+                android:layout_marginTop="20dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/blancDiaEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/blancDiaBtn"
+                android:layout_below="@id/spindleDirEt"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/_50"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/faceAllowBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/face_allow"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/blancDiaEt"
+                android:layout_below="@id/optionStopBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/faceAllowEt"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/faceAllowBtn"
+                android:layout_marginStart="5dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/_1_5"
+                android:layout_below="@id/optionStopEt"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

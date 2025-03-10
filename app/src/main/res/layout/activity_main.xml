@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainTitleRl"
+        android:background="@color/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/appNameTv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cnc_code_creator_2025"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/developerName"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/kalle_mikko"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/developerCompany"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_below="@id/developerName"
+            android:layout_height="wrap_content"
+            android:text="@string/software_oy"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/program_Choices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainTitleRl"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startNewBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/start_new"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/save"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/startNewBtn"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loadBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/load_btn"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/saveBtn"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/endProgBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/end_prog"
+            android:layout_below="@id/startNewBtn"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/infoBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saveBtn"
+            android:layout_toEndOf="@id/startNewBtn"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/info"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exitBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/exit"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/infoBtn"
+            android:layout_below="@id/loadBtn"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/programCycleRl"
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_below="@id/program_Choices"
+        android:layout_height="60dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/programCycleSectionTv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/program_cycles"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/programCycle_ChoicesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/programCycleRl"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/facingBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/facing"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/roughingBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/roughing"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/facingBtn"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/finishingBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/finishing"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/roughingBtn"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/threadingBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/threading"
+            android:layout_below="@id/facingBtn"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/groovingBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roughingBtn"
+            android:layout_toEndOf="@id/threadingBtn"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/grooving"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cuttingBtn"
+            android:layout_width="90dp"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/green"
+            android:text="@string/cutting"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/groovingBtn"
+            android:layout_below="@id/finishingBtn"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/programStructureRl"
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_below="@id/programCycle_ChoicesBtn"
+        android:layout_height="60dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/programStructureSectionTv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/program_structure"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/programStructureSv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/programStructureRl"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/programStructureBtnRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="70dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startProgramBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@color/green"
+            android:text="@string/_1_start_program"
+            tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extRoughBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/startProgramBtn"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_2_ext_rough_g71"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extCuttingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extRoughBtn"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_4_ext_cutting_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/endBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extCuttingBtn"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_5_end_program"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
