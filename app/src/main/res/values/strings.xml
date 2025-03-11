@@ -50,4 +50,20 @@
     <string name="blanc_dia">BLANC DIA</string>
     <string name="face_allow">FACE ALLOW</string>
     <string name="_1_5">1.5</string>
+    <string name="tool_retraction_point">TOOL RETRACTION POINT</string>
+    <string name="x200">X200</string>
+    <string name="z100">Z100</string>
+    <string name="program_number">PROGRAM NUMBER</string>
+    <string name="_0001">0001</string>
+    <string name="set">SET</string>
+    <string name="delete">DELETE</string>
+    <string name="post_processed_code">POST PROCESSED CODE</string>
+    <string name="output">Output</string>
+    <string name="post">POST</string>
+    <string name="save_program_to_folder">SAVE PROGRAM TO FOLDER</string>
+    <string name="program_to_folder">PROGRAM TO FOLDER</string>
+    <string name="find">FIND</string>
+    <string name="my_files">My files</string>
+    <string name="name_of_the_program">NAME OF THE PROGRAM</string>
+    <string name="turning_program_test">Turning program test</string>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey"
-    tools:context=".StartNewProgram">
+    tools:context=".StartNewProgramActivity">
 
     <RelativeLayout
         android:id="@+id/mainTitleRl"

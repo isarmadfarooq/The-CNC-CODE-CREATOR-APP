@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey"
-    tools:context=".ProgramStartingInformation">
+    tools:context=".ProgramStartingInformationActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,30 +15,31 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
-    <RelativeLayout
-        android:id="@+id/programStartingInfoRl"
-        android:background="@color/yellow"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        tools:ignore="UselessParent">
+        <RelativeLayout
+            android:id="@+id/programStartingInfoRl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/yellow"
+            tools:ignore="UselessParent">
 
-        <TextView
-            android:id="@+id/programStartingInfoTv"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/program_starting_information"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"/>
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/programStartingInfoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/program_starting_information"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/materialSelectionRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/programStartingInfoRl"
+            android:layout_centerInParent="true"
             android:layout_marginTop="20dp">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -212,8 +213,11 @@
             android:id="@+id/materialReedingRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_below="@id/materialSelectionRl"
-            android:layout_marginTop="40dp">
+            android:paddingBottom="40dp"
+            android:layout_marginTop="40dp"
+            tools:ignore="RtlSymmetry">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zeropointBtn"
@@ -472,11 +476,119 @@
                 android:singleLine="true"
                 android:ems="10"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/toolRetractionPoint"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tool_retraction_point"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/blancDiaBtn"
+                android:layout_marginTop="40dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/toolRetractionXEt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/toolRetractionPoint"
+                android:layout_marginStart="15dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/x200"
+                android:layout_below="@id/faceAllowBtn"
+                android:layout_marginTop="40dp"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/toolRetractionZEt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/toolRetractionPoint"
+                android:layout_marginStart="15dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/z100"
+                android:layout_below="@id/toolRetractionXEt"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/programNumberBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/program_number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/toolRetractionZEt"
+                android:layout_marginTop="20dp"
+                android:background="@color/yellow"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/programNumberEt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/toolRetractionPoint"
+                android:layout_marginStart="15dp"
+                android:background="@color/lite_blue"
+                android:hint="@string/_0001"
+                android:layout_below="@id/toolRetractionZEt"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/dark_grey"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:ems="10"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/setBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/set"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/programNumberBtn"
+                android:layout_marginTop="30dp"
+                android:background="@color/blue"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textColor="@color/black"
+                android:layout_marginStart="35dp"
+                android:textStyle="bold"
+                android:layout_below="@id/programNumberBtn"
+                android:layout_marginTop="30dp"
+                android:background="@color/blue"
+                android:layout_toEndOf="@id/setBtn"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
 
         </RelativeLayout>
 
 </RelativeLayout>
+    
 </androidx.core.widget.NestedScrollView>
