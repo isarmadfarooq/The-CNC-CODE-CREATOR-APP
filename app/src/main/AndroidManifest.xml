@@ -13,10 +13,19 @@
         android:theme="@style/Theme.CNC_CODE_GENERATOR_APP"
         tools:targetApi="31">
         <activity
-            android:name=".ProgramStartingInformation"
+            android:name=".FacingCycleDownDirActivity"
             android:exported="false" />
         <activity
-            android:name=".StartNewProgram"
+            android:name=".FacingCycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SaveProgramToFolderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProgramStartingInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartNewProgramActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

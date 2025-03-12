@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/mainTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/save_program_to_folder"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Program to Folder Section -->
+    <LinearLayout
+        android:id="@+id/programToFolderLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/yellow"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/programToFolderTv"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/program_to_folder"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/programToFolderFindBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@color/lite_blue"
+            android:text="@string/find" />
+    </LinearLayout>
+
+    <!-- Folder Name -->
+    <TextView
+        android:id="@+id/folderNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#D3EAFB"
+        android:padding="10dp"
+        android:text="@string/my_files"
+        android:textColor="#FF0000"
+        android:textSize="16sp" />
+
+    <!-- Name of the Program Section -->
+    <TextView
+        android:id="@+id/nameOfTheProgramTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/yellow"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="@string/name_of_the_program"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Program Name -->
+    <TextView
+        android:id="@+id/programNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#D3EAFB"
+        android:padding="10dp"
+        android:text="@string/turning_program_test"
+        android:textColor="#FF0000"
+        android:textSize="16sp" />
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:baselineAligned="false"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@android:drawable/progress_horizontal" />
+
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="#00BFFF"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="#00BFFF"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:text="@string/close"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

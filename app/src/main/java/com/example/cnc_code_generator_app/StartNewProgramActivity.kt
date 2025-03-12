@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cnc_code_generator_app.databinding.ActivityStartNewProgramBinding
 
-class StartNewProgram : AppCompatActivity() {
+class StartNewProgramActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityStartNewProgramBinding
 
@@ -16,7 +16,12 @@ class StartNewProgram : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.startBtn.setOnClickListener {
-            startActivity(Intent(this,ProgramStartingInformation::class.java))
+            // Clear previous program structure/data
+            ProgramRepository.programStructure.clear()
+            ProgramRepository.currentProgramData = ProgramData()  // reset to defaults
+
+            startActivity(Intent(this,ProgramStartingInformationActivity::class.java))
+            finish()
         }
 
         // Close button functionality

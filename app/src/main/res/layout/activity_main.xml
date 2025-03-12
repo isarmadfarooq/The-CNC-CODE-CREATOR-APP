@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,6 +8,11 @@
     android:background="@color/background_grey"
     tools:context=".MainActivity">
 
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="60dp">
     <RelativeLayout
         android:id="@+id/mainTitleRl"
         android:background="@color/yellow"
@@ -280,41 +285,34 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/programStructureRl"
-        android:background="@color/yellow"
-        android:layout_width="match_parent"
-        android:layout_below="@id/programCycle_ChoicesBtn"
-        android:layout_height="60dp"
-        android:layout_margin="20dp">
 
-        <TextView
-            android:id="@+id/programStructureSectionTv"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/program_structure"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"/>
+            <RelativeLayout
+                android:id="@+id/programStructureRl"
+                android:layout_below="@id/programCycle_ChoicesBtn"
+                android:layout_margin="20dp"
+                android:background="@color/yellow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/programStructureSectionTv"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/program_structure"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
 
-    <ScrollView
-        android:id="@+id/programStructureSv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/programStructureRl"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp">
+            </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/programStructureBtnRl"
+            android:layout_below="@id/programStructureRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="70dp">
+            android:layout_margin="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/startProgramBtn"
@@ -375,9 +373,77 @@
                 android:text="@string/_5_end_program"
                 android:paddingEnd="10dp"
                 tools:ignore="RtlSymmetry" />
+
         </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/programProceedCodeRl"
+        android:layout_below="@id/programStructureBtnRl"
+        android:layout_margin="20dp"
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/programProceedCodeTv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_processed_code"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/programProceedCodeSv"
+        android:layout_width="match_parent"
+        android:layout_below="@id/programProceedCodeRl"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:background="#E8E8E8">
+
+        <TextView
+            android:id="@+id/outputTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
     </ScrollView>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/postBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/post"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/programProceedCodeSv"
+        android:layout_marginTop="30dp"
+        android:background="@color/blue"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
 
-</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/outputBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/output"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/programProceedCodeSv"
+        android:layout_marginTop="30dp"
+        android:background="@color/blue"
+        android:layout_toEndOf="@id/postBtn"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

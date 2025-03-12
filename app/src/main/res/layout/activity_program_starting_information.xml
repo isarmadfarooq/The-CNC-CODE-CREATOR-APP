@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey"
-    tools:context=".ProgramStartingInformation">
+    tools:context=".ProgramStartingInformationActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,30 +15,33 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
-    <RelativeLayout
-        android:id="@+id/programStartingInfoRl"
-        android:background="@color/yellow"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        tools:ignore="UselessParent">
 
-        <TextView
-            android:id="@+id/programStartingInfoTv"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/program_starting_information"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"/>
-    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/programStartingInfoRl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/yellow"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/programStartingInfoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/program_starting_information"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/materialSelectionRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/programStartingInfoRl"
+            android:layout_centerInParent="true"
             android:layout_marginTop="20dp">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -206,6 +209,27 @@
                 android:layout_marginTop="20dp"
                 android:textSize="8sp"
                 tools:ignore="SmallSp" />
+
+            <RelativeLayout
+                android:id="@+id/summaryTvRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aisi303Tv"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/yellow">
+
+                <TextView
+                    android:id="@+id/summaryTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:text="@string/summary_will_be_displayed_here"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
         </RelativeLayout>
 
         <RelativeLayout
@@ -213,270 +237,382 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/materialSelectionRl"
-            android:layout_marginTop="40dp">
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="40dp"
+            tools:ignore="RtlSymmetry">
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zeropointBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/yellow"
                 android:text="@string/zero_point"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:background="@color/yellow"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/zeroPointEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/zeropointBtn"
                 android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/zeropointBtn"
                 android:background="@color/lite_blue"
-                android:hint="@string/g54"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/g54"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/spindleLimitBtn"
+                android:id="@+id/toolBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/zeroPointEt"
+                android:background="@color/yellow"
                 android:text="@string/spindle_limit"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toEndOf="@id/zeroPointEt"
-                android:layout_marginStart="10dp"
-                android:background="@color/yellow"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/spindleLimitEt"
+                android:id="@+id/toolEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/spindleLimitBtn"
                 android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/toolBtn"
                 android:background="@color/lite_blue"
-                android:hint="@string/_2000"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/_2000"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/coolantOnBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/coolant_on"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_below="@id/zeropointBtn"
                 android:layout_marginTop="20dp"
                 android:background="@color/yellow"
+                android:text="@string/coolant_on"
+                android:textColor="@color/black"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/coolantOnEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/coolantOnBtn"
                 android:layout_below="@id/zeroPointEt"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/coolantOnBtn"
                 android:background="@color/lite_blue"
-                android:hint="@string/m8"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/m8"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/coolantOffBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/toolBtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/coolantOnEt"
+                android:background="@color/yellow"
                 android:text="@string/coolant_off"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toEndOf="@id/coolantOnEt"
-                android:layout_below="@id/spindleLimitBtn"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
-                android:background="@color/yellow"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/coolantOffEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/coolantOffBtn"
+                android:layout_below="@id/toolEt"
                 android:layout_marginStart="5dp"
-                android:background="@color/lite_blue"
-                android:hint="@string/m9"
-                android:layout_below="@id/spindleLimitEt"
                 android:layout_marginTop="20dp"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
+                android:layout_toEndOf="@+id/coolantOffBtn"
+                android:background="@color/lite_blue"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/m9"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/spindleDirBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/spindle_dir"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_below="@id/coolantOnBtn"
                 android:layout_marginTop="20dp"
                 android:background="@color/yellow"
+                android:text="@string/spindle_dir"
+                android:textColor="@color/black"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/spindleDirEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/coolantOnBtn"
                 android:layout_below="@id/coolantOnEt"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/coolantOnBtn"
                 android:background="@color/lite_blue"
-                android:hint="@string/m3"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/m3"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/optionStopBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/coolantOffBtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/spindleDirEt"
+                android:background="@color/yellow"
                 android:text="@string/option_stop"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toEndOf="@id/spindleDirEt"
-                android:layout_below="@id/coolantOffBtn"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
-                android:background="@color/yellow"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/optionStopEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/optionStopBtn"
-                android:layout_marginStart="5dp"
-                android:background="@color/lite_blue"
-                android:hint="@string/m1"
                 android:layout_below="@id/coolantOffEt"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
+                android:layout_toEndOf="@id/optionStopBtn"
+                android:background="@color/lite_blue"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/m1"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/blancDiaBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/blanc_dia"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_below="@id/spindleDirBtn"
                 android:layout_marginTop="20dp"
                 android:background="@color/yellow"
+                android:text="@string/blanc_dia"
+                android:textColor="@color/black"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/blancDiaEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/blancDiaBtn"
                 android:layout_below="@id/spindleDirEt"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/blancDiaBtn"
                 android:background="@color/lite_blue"
-                android:hint="@string/_50"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/_50"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/faceAllowBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/optionStopBtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/blancDiaEt"
+                android:background="@color/yellow"
                 android:text="@string/face_allow"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toEndOf="@id/blancDiaEt"
-                android:layout_below="@id/optionStopBtn"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
-                android:background="@color/yellow"
                 android:textSize="10sp"
+                android:textStyle="bold"
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/faceAllowEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/faceAllowBtn"
-                android:layout_marginStart="5dp"
-                android:background="@color/lite_blue"
-                android:hint="@string/_1_5"
                 android:layout_below="@id/optionStopEt"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
-                android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:padding="15dp"
+                android:layout_toEndOf="@id/faceAllowBtn"
+                android:background="@color/lite_blue"
                 android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/_1_5"
                 android:inputType="text"
+                android:padding="15dp"
                 android:singleLine="true"
-                android:ems="10"/>
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/toolRetractionPoint"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blancDiaBtn"
+                android:layout_marginTop="40dp"
+                android:background="@color/yellow"
+                android:text="@string/tool_retraction_point"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/toolRetractionXEt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/faceAllowBtn"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@id/toolRetractionPoint"
+                android:background="@color/lite_blue"
+                android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/x200"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/toolRetractionZEt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolRetractionXEt"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/toolRetractionPoint"
+                android:background="@color/lite_blue"
+                android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/z100"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/toolCommentLabel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolRetractionZEt"
+                android:layout_marginTop="20dp"
+                android:background="@color/yellow"
+                android:text="@string/program_number"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/toolCommentEt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolRetractionZEt"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/toolRetractionPoint"
+                android:background="@color/lite_blue"
+                android:elevation="2dp"
+                android:ems="10"
+                android:hint="@string/_0001"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/setBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolCommentLabel"
+                android:layout_marginTop="30dp"
+                android:background="@color/blue"
+                android:text="@string/set"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolCommentLabel"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/setBtn"
+                android:background="@color/blue"
+                android:text="@string/delete"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
 
         </RelativeLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+    
 </androidx.core.widget.NestedScrollView>
