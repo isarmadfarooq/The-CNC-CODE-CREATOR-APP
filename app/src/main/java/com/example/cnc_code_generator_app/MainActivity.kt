@@ -52,8 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupProgramCycles() {
         binding.facingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("FACING cycle added")
-            refreshProgramStructureDisplay()
+            startActivity(Intent(this,FacingCycleActivity::class.java))
         }
         binding.roughingBtn.setOnClickListener {
             ProgramRepository.programStructure.add("ROUGHING cycle added")
@@ -78,10 +77,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupProgramStructure() {
+
         binding.startProgramBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("1. START PROGRAM")
-            refreshProgramStructureDisplay()
+            val programName = "LastSavedProgram" // Use a fixed or dynamic name
+            val intent = Intent(this, SaveProgramToFolderActivity::class.java).apply {
+                putExtra("program_name", programName)
+            }
+            startActivity(intent)
         }
+
         binding.extRoughBtn.setOnClickListener {
             ProgramRepository.programStructure.add("2. EXT. ROUGH G71")
             refreshProgramStructureDisplay()

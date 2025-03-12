@@ -66,4 +66,20 @@
     <string name="my_files">My files</string>
     <string name="name_of_the_program">NAME OF THE PROGRAM</string>
     <string name="turning_program_test">Turning program test</string>
+    <string name="summary_will_be_displayed_here">Summary will be displayed here</string>
+    <string name="facing_cycle_down_direction_g94">FACING CYCLE DOWN- DIRECTION G94</string>
+    <string name="facing_cycle_up_direction_g94">FACING CYCLE UP- DIRECTION G94</string>
+    <string name="facing_cycle">FACING CYCLE</string>
+    <string name="cnmg_80">CNMG 80</string>
+    <string name="wnmg_80">WNMG 80</string>
+    <string name="tnmg_60">TNMG 60</string>
+    <string name="dnmg_55">DNMG 55</string>
+    <string name="nose_comp">NOSE COMP</string>
+    <string name="g41">G41</string>
+    <string name="nose_radius">NOSE RADIUS</string>
+    <string name="_0_8">0.8</string>
+    <string name="finishing_allowance">FINISHING ALLOWANCE</string>
+    <string name="tool">TOOL</string>
+    <string name="_0101">0101</string>
+    <string name="tool_comment">TOOL COMMENT</string>
 </resources>
