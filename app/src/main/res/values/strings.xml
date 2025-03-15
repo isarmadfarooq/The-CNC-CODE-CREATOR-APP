@@ -82,4 +82,22 @@
     <string name="tool">TOOL</string>
     <string name="_0101">0101</string>
     <string name="tool_comment">TOOL COMMENT</string>
+    <string name="g42">G42</string>
+    <string name="ccmt_80">CCMT 80</string>
+    <string name="dcmt_55">DCMT 55</string>
+    <string name="facing_cycle_ndown_direction_g94">FACING CYCLE\nDOWN- DIRECTION G94</string>
+    <string name="todo">TODO</string>
+    <string name="s">S:</string>
+    <string name="_200">200</string>
+    <string name="f">F:</string>
+    <string name="_0_24">0.24</string>
+    <string name="w">W:</string>
+    <string name="_0_1">0.1</string>
+    <string name="start_p">START: P</string>
+    <string name="g0">G0</string>
+    <string name="x52">X52.</string>
+    <string name="z3">Z3.</string>
+    <string name="end_q">END: Q</string>
+    <string name="z0">Z0.</string>
+    <string name="x0">X0</string>
 </resources>
