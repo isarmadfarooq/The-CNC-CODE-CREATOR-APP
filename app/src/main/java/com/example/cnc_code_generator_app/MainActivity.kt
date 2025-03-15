@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cnc_code_generator_app.databinding.ActivityMainBinding
+import com.example.cnc_code_generator_app.facingCycles.FacingCycleActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupProgramCycles() {
         binding.facingBtn.setOnClickListener {
-            startActivity(Intent(this,FacingCycleActivity::class.java))
+            startActivity(Intent(this, FacingCycleActivity::class.java))
         }
         binding.roughingBtn.setOnClickListener {
             ProgramRepository.programStructure.add("ROUGHING cycle added")

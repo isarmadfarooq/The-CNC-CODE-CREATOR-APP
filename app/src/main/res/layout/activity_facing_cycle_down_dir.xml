@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey"
-    tools:context=".FacingCycleDownDirActivity">
+    tools:context=".facingCycles.FacingCycleDownDirActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         android:layout_marginTop="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/cnmg80Label"
+            android:id="@+id/ccmt80Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cnmg_80"
@@ -65,7 +65,7 @@
             android:layout_marginStart="5dp"
             android:textStyle="bold"
             android:background="@color/lite_blue"
-            android:layout_toEndOf="@id/cnmg80Label"
+            android:layout_toEndOf="@id/ccmt80Label"
             android:textSize="8sp"
             tools:ignore="SmallSp" />
 
@@ -124,7 +124,7 @@
             tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/dnmgLabel"
+            android:id="@+id/dcmtLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dnmg_55"
@@ -149,7 +149,7 @@
             android:layout_marginStart="5dp"
             android:layout_below="@id/wnmgBtn"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@id/dnmgLabel"
+            android:layout_toEndOf="@id/dcmtLabel"
             android:textSize="8sp"
             tools:ignore="SmallSp" />
 
@@ -162,7 +162,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/dnmgLabel"
+            android:layout_below="@id/dcmtLabel"
             android:background="@color/yellow"
             android:textSize="10sp"
             tools:ignore="SmallSp" />
@@ -195,7 +195,7 @@
             android:layout_marginStart="10dp"
             android:textStyle="bold"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/dnmgLabel"
+            android:layout_below="@id/dcmtLabel"
             android:layout_toEndOf="@id/noseCompEt"
             android:background="@color/yellow"
             android:textSize="10sp"

@@ -13,10 +13,19 @@
         android:theme="@style/Theme.CNC_CODE_GENERATOR_APP"
         tools:targetApi="31">
         <activity
-            android:name=".FacingCycleDownDirActivity"
+            android:name=".facingCycles.FacingCycleUpDirectionG94"
             android:exported="false" />
         <activity
-            android:name=".FacingCycleActivity"
+            android:name=".facingCycles.FacingCycleDonwDirectionG94"
+            android:exported="false" />
+        <activity
+            android:name=".facingCycles.FacingCycleUpDirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".facingCycles.FacingCycleDownDirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".facingCycles.FacingCycleActivity"
             android:exported="false" />
         <activity
             android:name=".SaveProgramToFolderActivity"
