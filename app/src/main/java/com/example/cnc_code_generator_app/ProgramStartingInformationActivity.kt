@@ -127,7 +127,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     // -------------------------
     private fun setupInputListeners() {
         // Example: Update summary when spindle limit loses focus.
-        binding.spindleLimitEt.setOnFocusChangeListener { _, hasFocus ->
+        binding.spindleDirEt.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 updateSummary()
             }
@@ -141,7 +141,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun preFillData() {
         binding.zeroPointEt.setText(data.zeroPoint)
-        binding.spindleLimitEt.setText(data.spindleLimit.toString())
+        binding.spindleDirEt.setText(data.spindleLimit.toString())
         binding.coolantOnEt.setText(data.coolantOn)
         binding.coolantOffEt.setText(data.coolantOff)
         binding.spindleDirEt.setText(data.spindleDir)
@@ -150,7 +150,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
         binding.faceAllowEt.setText(data.faceAllowance.toString())
         binding.toolRetractionXEt.setText(data.toolRetractionX.toString())
         binding.toolRetractionZEt.setText(data.toolRetractionZ.toString())
-        binding.programNumberEt.setText(data.programNumber.toString())
+        binding.toolCommentEt.setText(data.programNumber.toString())
 
         // Reflect pre-selected control type
         if (data.controlType == "FANUC") {
@@ -212,7 +212,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     // -------------------------
     private fun validateInputs(): Boolean {
         // Example: Validate spindle limit is between 500 and 4000.
-        val spindleLimitStr = binding.spindleLimitEt.text.toString()
+        val spindleLimitStr = binding.spindleDirEt.text.toString()
         val spindleLimit = spindleLimitStr.toIntOrNull()
         if (spindleLimit == null || spindleLimit < 500 || spindleLimit > 4000) {
             Toast.makeText(this, "Spindle limit must be between 500 and 4000", Toast.LENGTH_LONG).show()
@@ -227,7 +227,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     // -------------------------
     private fun saveData() {
         data.zeroPoint = binding.zeroPointEt.text.toString().ifEmpty { "G54" }
-        data.spindleLimit = binding.spindleLimitEt.text.toString().toIntOrNull()?.coerceIn(500, 4000) ?: 2000
+        data.spindleLimit = binding.spindleDirEt.text.toString().toIntOrNull()?.coerceIn(500, 4000) ?: 2000
         data.coolantOn = binding.coolantOnEt.text.toString().ifEmpty { "M8" }
         data.coolantOff = binding.coolantOffEt.text.toString().ifEmpty { "M9" }
         data.spindleDir = binding.spindleDirEt.text.toString().ifEmpty { "M3" }
@@ -236,7 +236,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
         data.faceAllowance = binding.faceAllowEt.text.toString().toDoubleOrNull()?.coerceIn(1.0, 50.0) ?: 1.5
         data.toolRetractionX = binding.toolRetractionXEt.text.toString().toDoubleOrNull()?.coerceIn(50.0, 500.0) ?: 200.0
         data.toolRetractionZ = binding.toolRetractionZEt.text.toString().toDoubleOrNull()?.coerceIn(50.0, 500.0) ?: 100.0
-        data.programNumber = binding.programNumberEt.text.toString().toIntOrNull() ?: 1
+        data.programNumber = binding.toolCommentEt.text.toString().toIntOrNull() ?: 1
 
         updateSummary()
     }

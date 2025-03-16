@@ -16,7 +16,7 @@
             android:name=".facingCycles.FacingCycleUpDirectionG94"
             android:exported="false" />
         <activity
-            android:name=".facingCycles.FacingCycleDonwDirectionG94"
+            android:name=".facingCycles.FacingCycleDownDirectionG94"
             android:exported="false" />
         <activity
             android:name=".facingCycles.FacingCycleUpDirActivity"
