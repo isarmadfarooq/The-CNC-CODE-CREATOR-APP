@@ -11,6 +11,7 @@
 
     <!-- Title Bar -->
     <TextView
+        android:textColor="@color/black"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/s"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     android:background="@color/yellow"
                     android:textStyle="bold"/>
@@ -79,6 +81,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="@string/_200"
                     android:inputType="number"/>
             </LinearLayout>
@@ -96,6 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/f"
+                    android:textColor="@color/black"
                     android:background="@color/yellow"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
@@ -105,6 +109,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="@string/_0_24"
                     android:inputType="numberDecimal"/>
             </LinearLayout>
@@ -122,6 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/w"
+                    android:textColor="@color/black"
                     android:background="@color/yellow"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
@@ -131,6 +137,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="@string/_0_1"
                     android:inputType="numberDecimal"/>
             </LinearLayout>
@@ -154,6 +161,7 @@
             android:id="@+id/startPositionTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:padding="4dp"
             android:background="@color/yellow"
             android:text="@string/start_p"
@@ -173,6 +181,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
+                android:textColor="@color/black"
                 android:text="@string/g0" />
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -181,6 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:text="@string/x52" />
 
             <EditText
@@ -189,6 +199,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:text="@string/z3" />
         </LinearLayout>
 
@@ -199,6 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="4dp"
+            android:textColor="@color/black"
             android:text="@string/end_q"
             android:background="@color/yellow"
             android:textSize="16sp"
@@ -217,6 +229,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:inputType="text"
                 android:text="X0." />
 
@@ -226,6 +239,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:text="@string/z0" />
         </LinearLayout>
     </LinearLayout>
@@ -243,6 +257,7 @@
             android:id="@+id/setBtn"
             android:background="@color/lite_blue"
             android:layout_width="0dp"
+            android:textColor="@color/black"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/set"
@@ -253,6 +268,7 @@
             android:layout_marginStart="10dp"
             android:background="@color/lite_blue"
             android:layout_weight="1"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:text="@string/delete"
             android:padding="8dp"/>
