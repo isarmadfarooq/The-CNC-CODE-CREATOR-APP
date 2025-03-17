@@ -31,7 +31,7 @@
         android:layout_margin="20dp"
         android:background="@color/green"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/externalRC_Z_DirTv"
@@ -59,7 +59,7 @@
         android:layout_margin="20dp"
         android:background="@color/green"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/externalRC_X_DirTv"
@@ -87,7 +87,7 @@
             android:layout_margin="20dp"
             android:background="@color/green"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/externalRC_ALC_Tv"
@@ -115,7 +115,7 @@
             android:layout_margin="20dp"
             android:background="@color/green"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/internalRC_Z_Dir_Tv"
@@ -143,7 +143,7 @@
             android:layout_margin="20dp"
             android:background="@color/green"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/internalRC_X_Dir_Tv"
@@ -173,7 +173,7 @@
             android:layout_margin="20dp"
             android:background="@color/green"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/internalRC_ALC_Tv"
@@ -201,7 +201,7 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingTop="10dp">
+        android:paddingTop="5dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSet"
