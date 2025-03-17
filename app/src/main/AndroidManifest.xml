@@ -13,6 +13,21 @@
         android:theme="@style/Theme.CNC_CODE_GENERATOR_APP"
         tools:targetApi="31">
         <activity
+            android:name=".CuttingCycles.CuttingCyclesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThreadingCycles.ThreadingCyclesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.FinishingCyclesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroovingCycles.GroovingCyclesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.RoughingCyclesActivity"
+            android:exported="false" />
+        <activity
             android:name=".facingCycles.FacingCycleUpDirectionG94"
             android:exported="false" />
         <activity

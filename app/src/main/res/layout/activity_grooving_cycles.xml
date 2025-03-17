@@ -1,0 +1,231 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="70dp"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/mainTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"
+            android:background="@color/yellow"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/grooving_cycles"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/externalGC_X_DirLL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/externalGC_X_DirTv"
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/external_grooving_cycle_x_direction_g75"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/externalGC_X_DirBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/lite_blue"
+                android:text="@string/take" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/externalGC_X_DirAdvanceLL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/externalGC_X_DirAdvanceTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/external_grooving_cycle_x_direction_advanced"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/externalGC_X_DirAdvanceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/lite_blue"
+                android:text="@string/take" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/internalGC_X_DirAdvanceLL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/internalGC_X_DirTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/internal_grooving_cycle_x_direction_g75"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internalGC_X_Dir_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/lite_blue"
+                android:text="@string/take" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/internalGC_X_DirAdvance_LL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/internalGC_X_DirAdvance_Tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/internal_grooving_cycle_x_direction_advanced"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internalGC_X_DirAdvance_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/lite_blue"
+                android:text="@string/take" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/faceGC_Z_Dir_LL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/faceGC_Z_Dir_Tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/face_grooving_cycle_z_direction_g74"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/faceGC_Z_Dir_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/lite_blue"
+                android:text="@string/take" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/facingGC_Z_DirAdvanceLL"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/facingGC_Z_DirAdvanceTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/face_grooving_cycle_z_direction_advanced"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/facingGC_Z_DirAdvanceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/lite_blue"
+                android:text="@string/take" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:background="#00BFFF"
+                android:padding="10dp"
+                android:text="@string/set"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="#00BFFF"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:text="@string/close"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
