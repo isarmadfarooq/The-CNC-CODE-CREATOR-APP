@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_grey"
-    tools:context=".facingCycles.FacingCycleUpDirActivity">
+    tools:context=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycleAdvanceLongCode">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:text="@string/facing_cycle_up_direction_g94"
+                android:text="@string/internal_roughing_cycle_advanced_long_code"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -73,7 +73,7 @@
                 android:id="@+id/wnmg80Lable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/wnmg_80"
+                android:text="@string/dcmt_55"
                 android:textColor="@color/black"
                 android:layout_toEndOf="@id/cnmg80Btn"
                 android:layout_marginStart="10dp"
@@ -124,10 +124,10 @@
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dcmtLabel"
+                android:id="@+id/dnmgLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dcmt_55"
+                android:text="@string/vbmt_35"
                 android:textColor="@color/black"
                 android:layout_toEndOf="@id/tnmgBtn"
                 android:layout_below="@id/wnmg80Lable"
@@ -139,7 +139,7 @@
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dcmtBtn"
+                android:id="@+id/dnmgBtn"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="@string/take"
@@ -149,7 +149,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_below="@id/wnmg80Btn"
                 android:layout_marginTop="20dp"
-                android:layout_toEndOf="@id/dcmtLabel"
+                android:layout_toEndOf="@id/dnmgLabel"
                 android:textSize="8sp"
                 tools:ignore="SmallSp" />
 
@@ -162,7 +162,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginTop="30dp"
-                android:layout_below="@id/dcmtLabel"
+                android:layout_below="@id/dnmgLabel"
                 android:background="@color/yellow"
                 android:textSize="10sp"
                 tools:ignore="SmallSp" />
@@ -174,8 +174,8 @@
                 android:layout_toEndOf="@id/noseCompLabel"
                 android:layout_marginStart="5dp"
                 android:background="@color/lite_blue"
-                android:hint="@string/g42"
-                android:layout_below="@id/dcmtBtn"
+                android:hint="@string/g41"
+                android:layout_below="@id/dnmgBtn"
                 android:layout_marginTop="30dp"
                 android:textColorHint="@color/dark_grey"
                 android:textColor="@color/black"
@@ -195,7 +195,7 @@
                 android:layout_marginStart="10dp"
                 android:textStyle="bold"
                 android:layout_marginTop="30dp"
-                android:layout_below="@id/dcmtLabel"
+                android:layout_below="@id/dnmgLabel"
                 android:layout_toEndOf="@id/noseCompEt"
                 android:background="@color/yellow"
                 android:textSize="10sp"
@@ -209,7 +209,7 @@
                 android:layout_marginStart="5dp"
                 android:background="@color/lite_blue"
                 android:hint="@string/_0_8"
-                android:layout_below="@id/dcmtBtn"
+                android:layout_below="@id/dnmgBtn"
                 android:layout_marginTop="30dp"
                 android:textColorHint="@color/dark_grey"
                 android:textColor="@color/black"
@@ -227,7 +227,7 @@
                 android:layout_below="@id/noseCompLabel"
                 android:layout_marginTop="20dp"
                 android:background="@color/yellow"
-                android:text="@string/finishing_allowance"
+                android:text="@string/finishing_after_roughing"
                 android:textColor="@color/black"
                 android:textSize="10sp"
                 android:textStyle="bold"
@@ -244,7 +244,7 @@
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:ems="10"
-                android:hint="@string/x200"
+                android:hint="@string/g70"
                 android:inputType="text"
                 android:padding="15dp"
                 android:singleLine="true"
@@ -311,7 +311,7 @@
                 android:layout_below="@id/finishingAllowanceLabel"
                 android:layout_marginTop="30dp"
                 android:ems="10"
-                android:hint="@string/_0101"
+                android:hint="@string/_0202"
                 android:inputType="text"
                 android:padding="15dp"
                 android:singleLine="true"

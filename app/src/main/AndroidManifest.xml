@@ -13,6 +13,39 @@
         android:theme="@style/Theme.CNC_CODE_GENERATOR_APP"
         tools:targetApi="31">
         <activity
+            android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Advance_LCApproach"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_Direction_G72"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Z_DirApproach"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.ExternalRoughingCycles.ExternalRouhingCycle_Advance_LCApproach"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.ExternalRoughingCycles.ExternalRouhingCycle_X_DirApproach"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.ExternalRoughingCycles.ExternalRougingCycle_Z_DirApproach"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycleAdvanceLongCode"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Z_Direction_G71"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.ExternalRoughingCycles.ExternalRoughingCycleAdvanceLongCode"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.ExternalRoughingCycles.ExternalRoughingCycle_X_DirectionG72"
+            android:exported="false" />
+        <activity
+            android:name=".RoughingCycles.ExternalRoughingCycles.ExternalRoughingCycle_Z_DirectionG71"
+            android:exported="false" />
+        <activity
             android:name=".CuttingCycles.CuttingCyclesActivity"
             android:exported="false" />
         <activity

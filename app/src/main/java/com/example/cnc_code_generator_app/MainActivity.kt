@@ -4,6 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cnc_code_generator_app.CuttingCycles.CuttingCyclesActivity
+import com.example.cnc_code_generator_app.FinishingCycles.FinishingCyclesActivity
+import com.example.cnc_code_generator_app.GroovingCycles.GroovingCyclesActivity
+import com.example.cnc_code_generator_app.RoughingCycles.RoughingCyclesActivity
+import com.example.cnc_code_generator_app.ThreadingCycles.ThreadingCyclesActivity
 import com.example.cnc_code_generator_app.databinding.ActivityMainBinding
 import com.example.cnc_code_generator_app.facingCycles.FacingCycleActivity
 
@@ -56,24 +61,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FacingCycleActivity::class.java))
         }
         binding.roughingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("ROUGHING cycle added")
-            refreshProgramStructureDisplay()
+            startActivity(Intent(this, RoughingCyclesActivity::class.java))
+
         }
         binding.finishingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("FINISHING cycle added")
-            refreshProgramStructureDisplay()
+            startActivity(Intent(this, FinishingCyclesActivity::class.java))
         }
         binding.threadingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("THREADING cycle added")
-            refreshProgramStructureDisplay()
+            startActivity(Intent(this, ThreadingCyclesActivity::class.java))
         }
         binding.groovingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("GROOVING cycle added")
-            refreshProgramStructureDisplay()
+            startActivity(Intent(this, GroovingCyclesActivity::class.java))
         }
         binding.cuttingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("CUTTING cycle added")
-            refreshProgramStructureDisplay()
+            startActivity(Intent(this, CuttingCyclesActivity::class.java))
         }
     }
 

@@ -46,9 +46,10 @@ class FacingCycleDownDirActivity : AppCompatActivity() {
 
     private fun setupInsertButtonListeners() {
         binding.cnmg80Btn.setOnClickListener { handleInsertSelection(binding.cnmg80Btn, "CNMG 80") }
-        binding.wnmgBtn.setOnClickListener { handleInsertSelection(binding.wnmgBtn, "WNMG 80") }
+        binding.wnmg80Btn.setOnClickListener { handleInsertSelection(binding.wnmg80Btn, "WNMG 80") }
         binding.tnmgBtn.setOnClickListener { handleInsertSelection(binding.tnmgBtn, "TNMG 60") }
         binding.dnmgBtn.setOnClickListener { handleInsertSelection(binding.dnmgBtn, "DNMG 55") }
+
     }
 
     private fun handleInsertSelection(button: androidx.appcompat.widget.AppCompatButton, insertLabel: String) {
@@ -59,7 +60,7 @@ class FacingCycleDownDirActivity : AppCompatActivity() {
     }
 
     private fun resetAllInsertButtons() {
-        listOf(binding.cnmg80Btn, binding.wnmgBtn, binding.tnmgBtn, binding.dnmgBtn).forEach {
+        listOf(binding.cnmg80Btn, binding.wnmg80Btn, binding.tnmgBtn, binding.dnmgBtn).forEach {
             it.text = getString(R.string.take)
             it.setBackgroundColor(defaultButtonColor)
         }
