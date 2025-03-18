@@ -29,14 +29,14 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
         binding.cnmg80Btn.setOnClickListener {
             selectInsert("CCMT 80", binding.cnmg80Btn)
         }
-        binding.wnmgBtn.setOnClickListener {
-            selectInsert("WNMG 80", binding.wnmgBtn)
+        binding.wnmg80Btn.setOnClickListener {
+            selectInsert("WNMG 80", binding.wnmg80Btn)
         }
         binding.tnmgBtn.setOnClickListener {
             selectInsert("TNMG 60", binding.tnmgBtn)
         }
-        binding.dnmgBtn.setOnClickListener {
-            selectInsert("DCMT 55", binding.dnmgBtn)
+        binding.dcmtBtn.setOnClickListener {
+            selectInsert("DCMT 55", binding.dcmtBtn)
         }
 
         // "SET" button: Validate required fields and, if valid, pass data to next activity.
@@ -95,12 +95,12 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
     private fun resetInsertButtons() {
         binding.cnmg80Btn.text = "TAKE"
         binding.cnmg80Btn.setBackgroundColor(Color.parseColor("#ABE4ED"))
-        binding.wnmgBtn.text = "TAKE"
-        binding.wnmgBtn.setBackgroundColor(Color.parseColor("#ABE4ED"))
+        binding.wnmg80Btn.text = "TAKE"
+        binding.wnmg80Btn.setBackgroundColor(Color.parseColor("#ABE4ED"))
         binding.tnmgBtn.text = "TAKE"
         binding.tnmgBtn.setBackgroundColor(Color.parseColor("#ABE4ED"))
-        binding.dnmgBtn.text = "TAKE"
-        binding.dnmgBtn.setBackgroundColor(Color.parseColor("#ABE4ED"))
+        binding.dcmtBtn.text = "TAKE"
+        binding.dcmtBtn.setBackgroundColor(Color.parseColor("#ABE4ED"))
     }
 
     /**

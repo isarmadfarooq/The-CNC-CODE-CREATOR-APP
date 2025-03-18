@@ -129,4 +129,9 @@
     <string name="cutting_cycles">CUTTING CYCLES</string>
     <string name="external_cutting_cycle_long_code">EXTERNAL CUTTING CYCLE LONG CODE</string>
     <string name="external_cutting_cycle_advanced">EXTERNAL CUTTING CYCLE ADVANCED</string>
+    <string name="vbmt_35">VBMT 35</string>
+    <string name="finishing_after_roughing">FINISHING AFTER ROUGHING !</string>
+    <string name="g70">G70</string>
+    <string name="_0202">0202</string>
+    <string name="ok">OK</string>
 </resources>
