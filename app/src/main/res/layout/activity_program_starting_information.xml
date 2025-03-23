@@ -229,7 +229,10 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+
             </RelativeLayout>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -273,7 +276,7 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/toolBtn"
+                android:id="@+id/spindleLimit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -286,11 +289,11 @@
                 tools:ignore="SmallSp" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/toolEt"
+                android:id="@+id/spindleLimitEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_toEndOf="@+id/toolBtn"
+                android:layout_toEndOf="@+id/spindleLimit"
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:ems="10"
@@ -338,7 +341,7 @@
                 android:id="@+id/coolantOffBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/toolBtn"
+                android:layout_below="@id/spindleLimit"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@id/coolantOnEt"
@@ -353,7 +356,7 @@
                 android:id="@+id/coolantOffEt"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/toolEt"
+                android:layout_below="@id/spindleLimitEt"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/coolantOffBtn"
@@ -614,5 +617,5 @@
         </RelativeLayout>
 
     </RelativeLayout>
-    
+
 </androidx.core.widget.NestedScrollView>
