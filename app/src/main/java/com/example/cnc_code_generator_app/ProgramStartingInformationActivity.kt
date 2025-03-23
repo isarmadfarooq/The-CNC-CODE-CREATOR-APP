@@ -2,8 +2,12 @@ package com.example.cnc_code_generator_app
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +17,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProgramStartingInformationBinding  // auto-generated from activity_program_starting_information.xml
     private val data = ProgramRepository.currentProgramData
+    private val dynamicFields = mutableListOf<EditText>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,13 +131,31 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     // Listen to input changes to update summary dynamically.
     // -------------------------
     private fun setupInputListeners() {
-        // Example: Update summary when spindle limit loses focus.
-        binding.spindleDirEt.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                updateSummary()
-            }
+        // List all EditText fields whose value changes should be reflected immediately.
+        val fields = listOf(
+            binding.zeroPointEt,
+            binding.spindleLimitEt,
+            binding.spindleDirEt,
+            binding.coolantOnEt,
+            binding.coolantOffEt,
+            binding.optionStopEt,
+            binding.blancDiaEt,
+            binding.faceAllowEt,
+            binding.toolRetractionXEt,
+            binding.toolRetractionZEt,
+            binding.toolCommentEt
+        )
+
+        fields.forEach { field ->
+            field.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+                override fun afterTextChanged(s: Editable?) {
+                    // Option 2: Rebuild the summary by reading directly from the views.
+                    updateSummary()
+                }
+            })
         }
-        // You can add similar listeners for other fields as needed.
     }
 
     // -------------------------
@@ -141,7 +164,7 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun preFillData() {
         binding.zeroPointEt.setText(data.zeroPoint)
-        binding.spindleDirEt.setText(data.spindleLimit.toString())
+        binding.spindleLimitEt.setText(data.spindleLimit.toString())
         binding.coolantOnEt.setText(data.coolantOn)
         binding.coolantOffEt.setText(data.coolantOff)
         binding.spindleDirEt.setText(data.spindleDir)
@@ -184,41 +207,63 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     }
 
     // -------------------------
-    // Update the summary TextView (assuming a summaryTv exists in your layout)
+    // Add a dynamic field
+    // -------------------------
+    private fun addDynamicField() {
+        val dynamicField = EditText(this).apply {
+            hint = "Additional Parameter"
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        dynamicField.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+            override fun afterTextChanged(s: Editable?) {
+                updateSummary()
+            }
+        })
+
+    }
+
+    // -------------------------
+    // Update the summary TextView by reading current view values.
     // -------------------------
     @SuppressLint("SetTextI18n")
     private fun updateSummary() {
-        val summary = """
-            Control Type: ${data.controlType}
-            Material: ${data.material}
-            Zero Point: ${data.zeroPoint}
-            Spindle Limit: ${data.spindleLimit}
-            Coolant On: ${data.coolantOn}
-            Coolant Off: ${data.coolantOff}
-            Spindle Direction: ${data.spindleDir}
-            Option Stop: ${data.optionStop}
-            Blank Diameter: ${data.blankDia}
-            Face Allowance: ${data.faceAllowance}
-            Tool Retraction: X ${data.toolRetractionX} , Z ${data.toolRetractionZ}
-            Program Number: ${data.programNumber}
-            Final Surface Speed: ${data.finalSurfaceSpeed}
-        """.trimIndent()
-        // Update summary TextView if it exists; otherwise, you may log it or ignore.
-        binding.summaryTv?.text = summary
+        val summary = StringBuilder().apply {
+            append("Control Type: ${data.controlType}\n")
+            append("Material: ${data.material}\n")
+            append("Zero Point: ${binding.zeroPointEt.text}\n")
+            append("Spindle Limit: ${binding.spindleLimitEt.text}\n")
+            append("Coolant On: ${binding.coolantOnEt.text}\n")
+            append("Coolant Off: ${binding.coolantOffEt.text}\n")
+            append("Spindle Direction: ${binding.spindleDirEt.text}\n")
+            append("Option Stop: ${binding.optionStopEt.text}\n")
+            append("Blank Diameter: ${binding.blancDiaEt.text}\n")
+            append("Face Allowance: ${binding.faceAllowEt.text}\n")
+            append("Tool Retraction: X ${binding.toolRetractionXEt.text} , Z ${binding.toolRetractionZEt.text}\n")
+            append("Program Number: ${binding.toolCommentEt.text}\n")
+            append("Final Surface Speed: ${data.finalSurfaceSpeed}\n")
+            dynamicFields.forEachIndexed { index, editText ->
+                append("Dynamic Field ${index + 1}: ${editText.text}\n")
+            }
+        }
+        binding.summaryTv?.text = summary.toString()
     }
 
     // -------------------------
     // Validate user inputs before saving data.
     // -------------------------
     private fun validateInputs(): Boolean {
-        // Example: Validate spindle limit is between 500 and 4000.
-        val spindleLimitStr = binding.spindleDirEt.text.toString()
-        val spindleLimit = spindleLimitStr.toIntOrNull()
-        if (spindleLimit == null || spindleLimit < 500 || spindleLimit > 4000) {
-            Toast.makeText(this, "Spindle limit must be between 500 and 4000", Toast.LENGTH_LONG).show()
-            return false
+        dynamicFields.forEachIndexed { index, editText ->
+            if (editText.text.isNullOrBlank()) {
+                Toast.makeText(this, "Dynamic Field ${index + 1} must not be empty", Toast.LENGTH_LONG).show()
+                return false
+            }
         }
-        // You can add more validations for other fields if needed.
         return true
     }
 
@@ -226,8 +271,10 @@ class ProgramStartingInformationActivity : AppCompatActivity() {
     // Save data from input fields into the shared data model.
     // -------------------------
     private fun saveData() {
+        // Here you might update the data model from the view if needed.
+        // For fields that require conversion, you can perform error-checking as necessary.
         data.zeroPoint = binding.zeroPointEt.text.toString().ifEmpty { "G54" }
-        data.spindleLimit = binding.spindleDirEt.text.toString().toIntOrNull()?.coerceIn(500, 4000) ?: 2000
+        data.spindleLimit = binding.spindleLimitEt.text.toString().toIntOrNull() ?: 2000
         data.coolantOn = binding.coolantOnEt.text.toString().ifEmpty { "M8" }
         data.coolantOff = binding.coolantOffEt.text.toString().ifEmpty { "M9" }
         data.spindleDir = binding.spindleDirEt.text.toString().ifEmpty { "M3" }

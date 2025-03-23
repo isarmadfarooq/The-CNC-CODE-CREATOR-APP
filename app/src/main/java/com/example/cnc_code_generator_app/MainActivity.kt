@@ -79,13 +79,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupProgramStructure() {
-
         binding.startProgramBtn.setOnClickListener {
-            val programName = "LastSavedProgram" // Use a fixed or dynamic name
-            val intent = Intent(this, SaveProgramToFolderActivity::class.java).apply {
-                putExtra("program_name", programName)
-            }
-            startActivity(intent)
+            ProgramRepository.programStructure.add("1. START PROGRAM")
+            refreshProgramStructureDisplay()
         }
 
         binding.extRoughBtn.setOnClickListener {
