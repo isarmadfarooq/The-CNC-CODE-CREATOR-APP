@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -13,11 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
-        android:paddingBottom="60dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="60dp">
 
-
-
+        <!-- Program Starting Info -->
         <RelativeLayout
             android:id="@+id/programStartingInfoRl"
             android:layout_width="match_parent"
@@ -37,14 +37,49 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/materialSelectionRl"
+        <!-- Material Selection RadioGroup -->
+        <RadioGroup
+            android:id="@+id/materialSelectionRg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_below="@id/programStartingInfoRl"
-            android:layout_centerInParent="true"
             android:layout_marginTop="20dp">
 
+            <RadioButton
+                android:id="@+id/steelRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steel" />
+
+            <RadioButton
+                android:id="@+id/aluminiumRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aluminium" />
+
+            <RadioButton
+                android:id="@+id/aisi303RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AISI 303" />
+
+            <RadioButton
+                android:id="@+id/aisi316RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AISI 316" />
+        </RadioGroup>
+
+        <!-- Other Views Container -->
+        <RelativeLayout
+            android:id="@+id/otherViewsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/materialSelectionRg"
+            android:layout_marginTop="20dp">
+
+            <!-- TAKE Buttons Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cnmg80Label"
                 android:layout_width="wrap_content"
@@ -153,7 +188,7 @@
                 android:textSize="8sp"
                 tools:ignore="SmallSp" />
 
-
+            <!-- Nose Component Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/noseCompLabel"
                 android:layout_width="wrap_content"
@@ -173,10 +208,10 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/noseCompLabel"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
                 android:background="@color/lite_blue"
                 android:hint="@string/g41"
                 android:layout_below="@id/dnmgBtn"
-                android:layout_marginTop="30dp"
                 android:textColorHint="@color/dark_grey"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -186,6 +221,7 @@
                 android:singleLine="true"
                 android:ems="10"/>
 
+            <!-- Nose Radius Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/noseRadiusLabel"
                 android:layout_width="wrap_content"
@@ -207,10 +243,10 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/noseRadiusLabel"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
                 android:background="@color/lite_blue"
                 android:hint="@string/_0_8"
                 android:layout_below="@id/dnmgBtn"
-                android:layout_marginTop="30dp"
                 android:textColorHint="@color/dark_grey"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -220,6 +256,7 @@
                 android:singleLine="true"
                 android:ems="10"/>
 
+            <!-- Finishing Allowance Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/finishingAllowanceLabel"
                 android:layout_width="200dp"
@@ -252,6 +289,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Zero Point Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zeropointBtn"
                 android:layout_width="wrap_content"
@@ -270,7 +308,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_toEndOf="@+id/zeropointBtn"
+                android:layout_toEndOf="@id/zeropointBtn"
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:ems="10"
@@ -284,7 +322,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
-
+            <!-- Tool Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/spindleLimit"
                 android:layout_width="wrap_content"
@@ -305,7 +343,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_toEndOf="@+id/spindleLimit"
+                android:layout_toEndOf="@id/spindleLimit"
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:layout_below="@id/finishingAllowanceLabel"
@@ -319,6 +357,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Coolant Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/coolantOnBtn"
                 android:layout_width="wrap_content"
@@ -339,7 +378,7 @@
                 android:layout_below="@id/zeroPointEt"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/coolantOnBtn"
+                android:layout_toEndOf="@id/coolantOnBtn"
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:ems="10"
@@ -373,7 +412,7 @@
                 android:layout_below="@id/toolEt"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/coolantOffBtn"
+                android:layout_toEndOf="@id/coolantOffBtn"
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:ems="10"
@@ -385,6 +424,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Spindle Direction Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/spindleDirBtn"
                 android:layout_width="wrap_content"
@@ -405,7 +445,7 @@
                 android:layout_below="@id/coolantOnEt"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/coolantOnBtn"
+                android:layout_toEndOf="@id/coolantOnBtn"
                 android:background="@color/lite_blue"
                 android:elevation="2dp"
                 android:ems="10"
@@ -417,6 +457,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Option Stop Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/optionStopBtn"
                 android:layout_width="wrap_content"
@@ -450,6 +491,8 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
+
+            <!-- Tool Retraction Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/toolRetractionPoint"
                 android:layout_width="200dp"
@@ -501,6 +544,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Tool Comment Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/toolCommentLabel"
                 android:layout_width="200dp"
@@ -533,6 +577,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Set and Delete Buttons -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/setBtn"
                 android:layout_width="150dp"

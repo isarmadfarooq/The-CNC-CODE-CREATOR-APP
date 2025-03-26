@@ -18,6 +18,8 @@
         <activity
             android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_Direction_G72"
             android:exported="false" />
+        <activity android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_DirApproach"
+            android:exported="false"/>
         <activity
             android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Z_DirApproach"
             android:exported="false" />
