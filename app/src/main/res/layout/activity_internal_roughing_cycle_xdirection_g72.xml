@@ -533,6 +533,7 @@
                 android:textColorHint="@color/dark_grey"
                 android:textSize="14sp" />
 
+            <!-- Set and Delete Buttons -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/setBtn"
                 android:layout_width="150dp"

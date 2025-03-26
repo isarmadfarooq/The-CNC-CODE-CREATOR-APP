@@ -10,6 +10,7 @@ import com.example.cnc_code_generator_app.R
 import com.example.cnc_code_generator_app.RoughingCycles.ExternalRoughingCycles.ExternalRoughingCycleAdvanceLongCode
 import com.example.cnc_code_generator_app.RoughingCycles.ExternalRoughingCycles.ExternalRoughingCycle_X_DirectionG72
 import com.example.cnc_code_generator_app.RoughingCycles.ExternalRoughingCycles.ExternalRoughingCycle_Z_DirectionG71
+import com.example.cnc_code_generator_app.RoughingCycles.InternalRoughingCycles.InternalRoughingCycleAdvanceLongCode
 import com.example.cnc_code_generator_app.RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Advance_LCApproach
 import com.example.cnc_code_generator_app.RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_Direction_G72
 import com.example.cnc_code_generator_app.RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Z_Direction_G71
@@ -63,7 +64,7 @@ class RoughingCyclesActivity : AppCompatActivity() {
                         startActivity(Intent(this, InternalRoughingCycle_X_Direction_G72::class.java))
                     }
                     "INTERNAL_ALC" -> {
-                        startActivity(Intent(this, InternalRoughingCycle_Advance_LCApproach::class.java))
+                        startActivity(Intent(this, InternalRoughingCycleAdvanceLongCode::class.java))
                     }
                 }
             } else {
