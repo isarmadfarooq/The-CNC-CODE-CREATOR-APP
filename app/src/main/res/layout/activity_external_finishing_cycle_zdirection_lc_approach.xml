@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_Z_DIRECTION_LC_APPROACH"
+    android:background="@color/background_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="70dp">
+
+        <!-- Title Bar -->
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEB3B"
+            android:text="@string/external_finishing_cycle_z_direction_long_code"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+        <!-- Main Layout: Image and Controls -->
+        <LinearLayout
+            android:id="@+id/imageAndControlLL"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Left Image Section -->
+            <LinearLayout
+                android:id="@+id/leftImageSection"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_height="200dp"
+                android:padding="4dp"
+                tools:ignore="NestedWeights">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/external_finishing_cycle_z_direction_lc_approach"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+            <!-- Right Controls Section -->
+            <LinearLayout
+                android:id="@+id/rightControlSection"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/background_grey"
+                android:padding="8dp">
+
+                <!-- S Parameter -->
+                <LinearLayout
+                    android:id="@+id/S_ParameterLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/S_ParameterTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/S_ParameterEt"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="@string/_180"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <!-- F Parameter -->
+                <LinearLayout
+                    android:id="@+id/F_ParameterLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/F_ParameterTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/f"
+                        android:textColor="@color/black"
+                        android:background="@color/yellow"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/F_ParameterEt"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="0.15"
+                        android:inputType="numberDecimal"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Start and End Positions Section -->
+
+        <!-- Bottom Buttons Section -->
+
+        <LinearLayout
+            android:id="@+id/bottomButtonSectionLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Start Position -->
+            <TextView
+                android:id="@+id/startPositionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/start_p"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/g0LL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/g0Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g0" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/g0_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x52" />
+
+                <EditText
+                    android:id="@+id/g0_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z3" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/twoNdTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_2nd"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/secondLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/secondBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/second_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:text="@string/x30"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/second_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z0" />
+
+                <EditText
+                    android:id="@+id/second_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/threeRDTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_3rd"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/threeRDLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/threeRdBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/third_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x30" />
+
+                <EditText
+                    android:id="@+id/third_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_18" />
+
+                <EditText
+                    android:id="@+id/third_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fourthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_4th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/fourthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fourthBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g2" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fourth_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x34" />
+
+                <EditText
+                    android:id="@+id/fourth_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_20" />
+
+                <EditText
+                    android:id="@+id/fourth_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/r2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fifthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_5th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/fifthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fifthBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fifth_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x38" />
+
+                <EditText
+                    android:id="@+id/fifth_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_20" />
+
+                <EditText
+                    android:id="@+id/fifth_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/sixthNdTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_6th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/sixthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sixthBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g3" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/sixth_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x40" />
+
+                <EditText
+                    android:id="@+id/sixth_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_21" />
+
+                <EditText
+                    android:id="@+id/sixth_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/r1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/seventhTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_7th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/seventhLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/seventhBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/seventh_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x40" />
+
+                <EditText
+                    android:id="@+id/seventh_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_30" />
+
+                <EditText
+                    android:id="@+id/seventh_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/eighthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_8th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/eighthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/eighthBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/eighth_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x50" />
+
+                <EditText
+                    android:id="@+id/eighth_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_30" />
+
+                <EditText
+                    android:id="@+id/eighth_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ninethTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_9th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ninthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ninthBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ninth_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x" />
+
+                <EditText
+                    android:id="@+id/ninth_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z" />
+
+                <EditText
+                    android:id="@+id/ninth_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tenthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_10th"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/tenthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tenthBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tenth_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x" />
+
+                <EditText
+                    android:id="@+id/tenth_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z" />
+
+                <EditText
+                    android:id="@+id/tenth_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/eleventhTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:background="@color/yellow"
+                android:text="@string/_2nd"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/eleventhLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/g1Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/eleventh_X_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/x" />
+
+                <EditText
+                    android:id="@+id/eleventh_Z_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z" />
+
+                <EditText
+                    android:id="@+id/eleventh_R_Et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/R" />
+            </LinearLayout>
+
+            <!-- End Position -->
+            <TextView
+                android:id="@+id/endPositionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:text="@string/end_q"
+                android:background="@color/yellow"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/endPositionBtnLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/endPositionBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:text="@string/g1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/endPositionXEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:text="@string/x20" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/endPositionZEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="@string/z_30" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/blue"
+            android:padding="8dp"
+            android:layout_marginTop="30dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/setBtn"
+                android:background="@color/lite_blue"
+                android:layout_width="0dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/set"
+                android:padding="8dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/lite_blue"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
