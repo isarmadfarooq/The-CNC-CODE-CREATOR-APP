@@ -13,13 +13,50 @@
         android:theme="@style/Theme.CNC_CODE_GENERATOR_APP"
         tools:targetApi="31">
         <activity
+            android:name=".FinishingCycles.Internal_Finishing_Cycles.INTERNAL_FINISHING_CYCLE_Z_DIRECTION_ADVANCED"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.Internal_Finishing_Cycles.INTERNAL_FINISHING_CYCLE_X_DIRECTION_LONG_CODE"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.Internal_Finishing_Cycles.INTERNAL_FINISHING_CYCLE_Z_DIRECTION_LONG_CODE"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.Internal_Finishing_Cycles.INTERNAL_FINISHING_CYCLE_Z_DIRECTION_ADVANCED_APPROACH"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.Internal_Finishing_Cycles.INTERNAL_FINISHING_CYCLE_X_DIRECTION_LC_APPROACH"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.Internal_Finishing_Cycles.INTERNAL_FINISHING_CYCLE_Z_DIRECTION_LC_APPROACH"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_Z_DIRECTION_ADVANCE_APPROACH"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_X_DIRECTION_LC_APPROACH"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_Z_DIRECTION_LC_APPROACH"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_Z_DIRECTION_ADVANCED"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_X_DIRECTION_LONG_CODE"
+            android:exported="false" />
+        <activity
+            android:name=".FinishingCycles.External_Finishing_Cycles.EXTERNAL_FINISHING_CYCLE_Z_DIRECTION_LONG_CODE"
+            android:exported="false" />
+        <activity
             android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Advance_LCApproach"
             android:exported="false" />
         <activity
             android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_Direction_G72"
             android:exported="false" />
-        <activity android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_DirApproach"
-            android:exported="false"/>
+        <activity
+            android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_X_DirApproach"
+            android:exported="false" />
         <activity
             android:name=".RoughingCycles.InternalRoughingCycles.InternalRoughingCycle_Z_DirApproach"
             android:exported="false" />
