@@ -181,4 +181,7 @@
     <string name="surface_roughness_setting_ra">SURFACE ROUGHNESS SETTING Ra</string>
     <string name="_3_2">3.2</string>
     <string name="_0303">0303</string>
+    <string name="x60">X60</string>
+    <string name="r3">R3</string>
+    <string name="r2_5">R2.5</string>
 </resources>
