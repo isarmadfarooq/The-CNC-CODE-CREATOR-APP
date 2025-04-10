@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         setupMainActions()
         setupProgramCycles()
-//        setupProgramStructure()
+        setupProgramStructure()
         setupOutput()
     }
 
@@ -78,26 +78,36 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun setupProgramStructure() {
-//        binding.startProgramBtn.setOnClickListener {
-//            ProgramRepository.programStructure.add("1. START PROGRAM")
-//            refreshProgramStructureDisplay()
-//        }
-//
-//        binding.extRoughBtn.setOnClickListener {
-//            ProgramRepository.programStructure.add("2. EXT. ROUGH G71")
-//            refreshProgramStructureDisplay()
-//        }
-//        binding.extCuttingBtn.setOnClickListener {
-//            ProgramRepository.programStructure.add("3. EXT. CUTTING ALC")
-//            refreshProgramStructureDisplay()
-//        }
-//        binding.endProgBtn.setOnClickListener {
-//            ProgramRepository.programStructure.add("4. END PROGRAM")
-//            refreshProgramStructureDisplay()
-//        }
-//    }
+    private fun setupProgramStructure() {
+        binding.startProgramBtn.setOnClickListener {
+            // Populate the program structure with data from ProgramData
+            ProgramRepository.programStructure.clear() // Clear previous data if required
 
+            // Add basic program structure
+            ProgramRepository.programStructure.add("O${ProgramRepository.currentProgramData.programNumber}  (Program Start)")
+            ProgramRepository.programStructure.add("${ProgramRepository.currentProgramData.zeroPoint}  (Work Coordinate System)")
+            ProgramRepository.programStructure.add("${ProgramRepository.currentProgramData.coolantOn}  (Coolant On)")
+            ProgramRepository.programStructure.add("${ProgramRepository.currentProgramData.spindleDir} S${ProgramRepository.currentProgramData.spindleLimit}  (Spindle On)")
+            ProgramRepository.programStructure.add("G96 S${ProgramRepository.currentProgramData.defaultSurfaceSpeed}  (Constant Surface Speed)")
+            ProgramRepository.programStructure.add("M1  (Optional Stop)")
+            ProgramRepository.programStructure.add("G50 D${ProgramRepository.currentProgramData.blankDia}  (Set Maximum Spindle Speed)")
+            ProgramRepository.programStructure.add("G00 X${ProgramRepository.currentProgramData.toolRetractionX} Z${ProgramRepository.currentProgramData.toolRetractionZ}  (Tool Retraction)")
+            ProgramRepository.programStructure.add("${ProgramRepository.currentProgramData.coolantOff}  (Coolant Off)")
+            ProgramRepository.programStructure.add("M30  (End of Program)")
+
+            // Add material and control type information to the program structure
+            ProgramRepository.programStructure.add("Material Selected: ${ProgramRepository.currentProgramData.material}")
+            ProgramRepository.programStructure.add("Control Type: ${ProgramRepository.currentProgramData.controlType}")
+
+            // Add dynamic fields to the program structure
+            ProgramRepository.currentProgramData.dynamicFields.forEach { (key, value) ->
+                ProgramRepository.programStructure.add("$key: $value")
+            }
+
+            // Refresh the program structure display
+            refreshProgramStructureDisplay()
+        }
+    }
     private fun setupOutput() {
         binding.outputBtn.setOnClickListener {
             val code = ProgramRepository.programStructure.joinToString("\n")
