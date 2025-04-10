@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         setupMainActions()
         setupProgramCycles()
-        setupProgramStructure()
+//        setupProgramStructure()
         setupOutput()
     }
 
@@ -78,25 +78,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupProgramStructure() {
-        binding.startProgramBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("1. START PROGRAM")
-            refreshProgramStructureDisplay()
-        }
-
-        binding.extRoughBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("2. EXT. ROUGH G71")
-            refreshProgramStructureDisplay()
-        }
-        binding.extCuttingBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("3. EXT. CUTTING ALC")
-            refreshProgramStructureDisplay()
-        }
-        binding.endProgBtn.setOnClickListener {
-            ProgramRepository.programStructure.add("4. END PROGRAM")
-            refreshProgramStructureDisplay()
-        }
-    }
+//    private fun setupProgramStructure() {
+//        binding.startProgramBtn.setOnClickListener {
+//            ProgramRepository.programStructure.add("1. START PROGRAM")
+//            refreshProgramStructureDisplay()
+//        }
+//
+//        binding.extRoughBtn.setOnClickListener {
+//            ProgramRepository.programStructure.add("2. EXT. ROUGH G71")
+//            refreshProgramStructureDisplay()
+//        }
+//        binding.extCuttingBtn.setOnClickListener {
+//            ProgramRepository.programStructure.add("3. EXT. CUTTING ALC")
+//            refreshProgramStructureDisplay()
+//        }
+//        binding.endProgBtn.setOnClickListener {
+//            ProgramRepository.programStructure.add("4. END PROGRAM")
+//            refreshProgramStructureDisplay()
+//        }
+//    }
 
     private fun setupOutput() {
         binding.outputBtn.setOnClickListener {
