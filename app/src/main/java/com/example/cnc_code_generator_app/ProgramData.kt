@@ -15,5 +15,6 @@ data class ProgramData(
     var toolRetractionZ: Double = 100.0,
     var programNumber: Int = 1,
     var defaultSurfaceSpeed: Int = 1000,
-    var finalSurfaceSpeed: Int = 1000
+    var finalSurfaceSpeed: Int = 1000,
+    var dynamicFields: MutableMap<String, String> = mutableMapOf() // For dynamic fields
 )
