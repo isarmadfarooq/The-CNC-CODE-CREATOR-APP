@@ -327,7 +327,7 @@
             tools:ignore="RtlSymmetry" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/extRoughBtn"
+                android:id="@+id/facing_Cycle_Up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="textStart"
@@ -338,12 +338,44 @@
                 android:layout_below="@id/startProgramBtn"
                 android:background="@color/green"
                 android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_2_facing_cycle_up"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/facing_Cycle_Down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/facing_Cycle_Up"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_3_facing_cycle_down"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extRoughBtn_Z_G71"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/facing_Cycle_Down"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
                 android:text="@string/_2_ext_rough_g71"
                 android:paddingEnd="10dp"
                 tools:ignore="RtlSymmetry" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/extCuttingBtn"
+                android:id="@+id/extRoughBtn_X_G72"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="textStart"
@@ -351,15 +383,15 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp"
-                android:layout_below="@id/extRoughBtn"
+                android:layout_below="@id/extRoughBtn_Z_G71"
                 android:background="@color/green"
                 android:drawableEnd="@drawable/icons_edit_24"
-                android:text="@string/_4_ext_cutting_alc"
+                android:text="@string/ext_rough_x_g72"
                 android:paddingEnd="10dp"
                 tools:ignore="RtlSymmetry" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/endBtn"
+                android:id="@+id/extRoughBtn_ALC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="textStart"
@@ -367,10 +399,346 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp"
-                android:layout_below="@id/extCuttingBtn"
+                android:layout_below="@id/extRoughBtn_X_G72"
                 android:background="@color/green"
                 android:drawableEnd="@drawable/icons_edit_24"
-                android:text="@string/_5_end_program"
+                android:text="@string/_4_ext_rough_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intRoughBtn_Z_G71"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extRoughBtn_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/int_rough_z_g71"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intRoughBtn_X_G72"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intRoughBtn_Z_G71"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_6_int_rough_x_g71"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intRoughBtn_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intRoughBtn_X_G72"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_7_int_rough_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extFinish_Z"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intRoughBtn_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_10_ext_finish_z"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extFinish_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extFinish_Z"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_11_ext_finish_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extFinish_X"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extFinish_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_12_ext_finish_x"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intFinish_Z"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extFinish_X"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_13_int_finish_z"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intFinish_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intFinish_Z"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_14_int_finish_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intFinish_X"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intFinish_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_15_int_finish_x"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extThread_G76"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intFinish_X"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_16_ext_thread_g76"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extThreadALC_G32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extThread_G76"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_17_ext_thread_alc_g32"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intThread_G76"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extThreadALC_G32"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_18_int_thread_g76"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intThreadALC_G32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intThread_G76"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_19_int_thread_alc_g32"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extGroov_X_G75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intThreadALC_G32"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_20_ext_groov_x_g75"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extGroov_X_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extGroov_X_G75"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/ext_groov_x_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intGroov_X_G75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extGroov_X_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_22_int_groov_x_g75"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/intGroov_X_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intGroov_X_G75"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_23_int_groov_x_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/faceGroov_Z_G74"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/intGroov_X_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_24_face_groov_z_g74"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/faceGroov_Z_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/faceGroov_Z_G74"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_25_face_groov_z_alc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extCutt_LC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/faceGroov_Z_ALC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_26_ext_cutt_lc"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extCutt_ALC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/extCutt_LC"
+                android:background="@color/green"
+                android:drawableEnd="@drawable/icons_edit_24"
+                android:text="@string/_27_ext_cutt_alc"
                 android:paddingEnd="10dp"
                 tools:ignore="RtlSymmetry" />
 
