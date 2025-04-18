@@ -86,7 +86,6 @@ class FacingCycleDownDirectionG94 : AppCompatActivity() {
      * Generates G-Code based on user input and navigates back to MainActivity
      */
     private fun generateGCode() {
-        // Read inputs
         val sValue = binding.SParameterEt.text.toString().trim()
         val fValue = binding.FParameterEt.text.toString().trim()
         val wValue = binding.WParameterEt.text.toString().trim()
@@ -95,46 +94,31 @@ class FacingCycleDownDirectionG94 : AppCompatActivity() {
         val endX = binding.endPositionXEt.text.toString().trim()
         val endZ = binding.endPositionZEt.text.toString().trim()
 
-        // Validate fields
         if (sValue.isEmpty() || fValue.isEmpty() || wValue.isEmpty() ||
             startX.isEmpty() || startZ.isEmpty() || endX.isEmpty() || endZ.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields before proceeding.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Save values in SharedPreferences (only in memory)
-        sharedPreferences?.edit()?.apply {
-            putString("S_VALUE", sValue)
-            putString("F_VALUE", fValue)
-            putString("W_VALUE", wValue)
-            putString("START_X", startX)
-            putString("START_Z", startZ)
-            putString("END_X", endX)
-            putString("END_Z", endZ)
-            apply()
-        }
+        val editor = sharedPreferences?.edit()
+        editor?.putBoolean("isFacingCycleDownDataSaved", true) // Save flag
+        editor?.putString("S_VALUE", sValue)
+        editor?.putString("F_VALUE", fValue)
+        editor?.putString("W_VALUE", wValue)
+        editor?.putString("START_X", startX)
+        editor?.putString("START_Z", startZ)
+        editor?.putString("END_X", endX)
+        editor?.putString("END_Z", endZ)
+        editor?.putString("TOOL_NUMBER", toolNumber)
+        editor?.putString("TOOL_COMMENT", toolComment)
+        editor?.putString("ZERO_POINT", zeroPoint)
+        editor?.putString("COOLANT_ON", coolantOn)
+        editor?.putString("COOLANT_OFF", coolantOff)
+        editor?.putString("SPINDLE_DIR", spindleDir)
+        editor?.putString("OPTION_STOP", optionStop)
+        editor?.apply()
 
-        // Generate G-Code
-        val finalCode = """
-            (FACING DOWN)
-            T${toolNumber ?: "0101"} ${if (!toolComment.isNullOrBlank()) "($toolComment)" else ""}
-            ${zeroPoint ?: "G54"}
-            G96 S$sValue${spindleDir ?: " M3"}
-            G18 G99
-            ${coolantOn ?: "M8"}
-            G0 $startX$startZ
-            G94 $endX$endZ F$fValue
-            G80
-            ${coolantOff ?: "M9"}
-            G0 X200.Z100.
-            ${optionStop ?: "M1"}
-            ;
-        """.trimIndent()
-
-        // Display G-Code in Toast
-        Toast.makeText(this, "G-Code Generated & Saved!", Toast.LENGTH_SHORT).show()
-
-        // Navigate to MainActivity
+        Toast.makeText(this, "G-Code Saved!", Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
