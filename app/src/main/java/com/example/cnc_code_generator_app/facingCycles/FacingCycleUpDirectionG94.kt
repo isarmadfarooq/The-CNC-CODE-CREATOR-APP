@@ -14,6 +14,7 @@ class FacingCycleUpDirectionG94 : AppCompatActivity() {
 
     private lateinit var binding: ActivityFacingCycleUpDirectionG94Binding
 
+
     // We use this SharedPreferences only while the app is open.
     // If you clear them on the app's first screen, data will be lost upon app close.
     private var ephemeralPrefs: SharedPreferences? = null
@@ -85,16 +86,14 @@ class FacingCycleUpDirectionG94 : AppCompatActivity() {
      * 4) Move to MainActivity.
      */
     private fun onSetButtonClicked() {
-        // Check if any field in this activity is empty
         if (!areFieldsValid()) {
             Toast.makeText(this, "Please fill all fields before saving!", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // If everything is valid, store data in ephemeral SharedPreferences
         val editor = ephemeralPrefs?.edit()
 
-        // 1. Store the data retrieved from previous activity
+        editor?.putBoolean("isFacingCycleUpDataSaved", true) // Save flag
         editor?.putString("SELECTED_INSERT", selectedInsert)
         editor?.putString("NOSE_COMP", noseComp)
         editor?.putString("NOSE_RADIUS", noseRadius)
@@ -109,7 +108,6 @@ class FacingCycleUpDirectionG94 : AppCompatActivity() {
         editor?.putString("TOOL_RETRACTION_Z", toolRetractZ)
         editor?.putString("TOOL_COMMENT", toolComment)
 
-        // 2. Store the data from the fields in THIS activity
         with(binding) {
             editor?.putString("S_VALUE", SParameterEt.text.toString().trim())
             editor?.putString("F_VALUE", FParameterEt.text.toString().trim())
@@ -120,16 +118,10 @@ class FacingCycleUpDirectionG94 : AppCompatActivity() {
             editor?.putString("END_Z", endPositionZEt.text.toString().trim())
         }
 
-        // Apply changes
         editor?.apply()
 
-        // Show a Toast message
-        Toast.makeText(this, "Data saved in SharedPreferences (ephemeral)!", Toast.LENGTH_SHORT).show()
-
-        // Clear fields
+        Toast.makeText(this, "G-Code Saved!", Toast.LENGTH_SHORT).show()
         clearAllFields()
-
-        // Navigate to MainActivity
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }

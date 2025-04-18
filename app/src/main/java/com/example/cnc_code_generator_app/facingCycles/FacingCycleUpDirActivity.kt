@@ -23,9 +23,10 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
         binding = ActivityFacingCycleUpDirBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Pre-fill default data in all fields
+        prefillDefaultData()
+
         // Set up insert selection buttons.
-        // When one is pressed, its text becomes "OK" with background color "#EA509CD3",
-        // and all other buttons revert to the default state.
         binding.cnmg80Btn.setOnClickListener {
             selectInsert("CCMT 80", binding.cnmg80Btn)
         }
@@ -76,11 +77,23 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
     }
 
     /**
-     * Handles insert selection:
-     * - Sets the selectedInsert variable.
-     * - Resets all insert buttons to default.
-     * - Updates the clicked button's text to "OK" and background color to "#EA509CD3".
+     * Pre-fill default data into all fields.
      */
+    private fun prefillDefaultData() {
+        binding.noseCompEt.setText("G42")
+        binding.noseRadiusEt.setText("0.8")
+        binding.finishingAllowanceEt.setText("0.2")
+        binding.zeroPointEt.setText("G54")
+        binding.toolEt.setText("0101")
+        binding.coolantOnEt.setText("M8")
+        binding.coolantOffEt.setText("M9")
+        binding.spindleDirEt.setText("M3")
+        binding.optionStopEt.setText("M1")
+        binding.toolRetractionXEt.setText("X200")
+        binding.toolRetractionZEt.setText("Z100")
+        binding.toolCommentEt.setText("0001")
+    }
+
     private fun selectInsert(insertName: String, selectedButton: androidx.appcompat.widget.AppCompatButton) {
         selectedInsert = insertName
         resetInsertButtons()
@@ -88,10 +101,6 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
         selectedButton.setBackgroundColor(Color.parseColor("#EA509CD3"))
     }
 
-    /**
-     * Resets all insert buttons to the default state ("TAKE" and original color).
-     * Adjust the default color value as needed.
-     */
     private fun resetInsertButtons() {
         binding.cnmg80Btn.text = "TAKE"
         binding.cnmg80Btn.setBackgroundColor(Color.parseColor("#ABE4ED"))
@@ -103,9 +112,6 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
         binding.dcmtBtn.setBackgroundColor(Color.parseColor("#ABE4ED"))
     }
 
-    /**
-     * Validates that all required fields are filled and that an insert has been selected.
-     */
     private fun areRequiredFieldsValid(): Boolean {
         if (selectedInsert.isNullOrEmpty()) return false
 
@@ -126,9 +132,6 @@ class FacingCycleUpDirActivity : AppCompatActivity() {
         return true
     }
 
-    /**
-     * Clears all fields and resets the selected insert.
-     */
     private fun clearAllFields() {
         selectedInsert = null
         resetInsertButtons()
